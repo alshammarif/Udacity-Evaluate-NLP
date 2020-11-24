@@ -1,0 +1,22 @@
+$padding: 10px 17px;
+$border-radius: 15px;
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px 15px 20px;
+    box-shadow: 0 4px 2px -2px #c0c0c0;
+    background-color: seagreen;
+}
+
+.logo {
+    padding: $padding;
+    color: white;
+}
+
+.nav {
+    padding: $padding;
+    background-color: springgreen;
+    color: darkgreen;
+    border-radius: $border-radius;
+}

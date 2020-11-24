@@ -1,0 +1,30 @@
+$border-radius: 8px;
+
+form {
+    border-radius: $border-radius;
+    padding: 30px 40px;
+    background-color: rgba(152, 251, 152, 0.582);
+}
+
+label {
+    color: seagreen;
+    font-weight: bold;
+}
+
+textarea {
+    padding: 5px 20px;
+    width: 100%;
+    line-height: 16px;
+    margin: 15px 0;
+    border: 1px lightgreen solid;
+    border-radius: 7px;
+}
+
+input {
+    padding: 10px 35px;
+    border-radius: $border-radius;
+    border: none;
+    background-color: mediumaquamarine;
+    color: darkslategrey;
+}
+

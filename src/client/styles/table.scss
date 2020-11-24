@@ -1,0 +1,55 @@
+// the table CSS code was taken from w3schools and changed a bit to fit my theme
+
+#NLPSec h3 {
+    margin: 10px 0;
+    font-weight: bold;
+    color: seagreen;
+}
+
+#resTable {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #resTable td, #resTable th {
+    //border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #resTable tr:nth-child(odd){background-color: rgba(152, 251, 152, 0.582);}
+  
+  #resTable tr:hover {background-color: rgb(188, 223, 202);}
+
+  #resTable td {
+      color: rgb(28, 105, 61);
+  }
+
+  #resTable tr .hRow {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  #resTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgba(114, 233, 114, 0.836);
+    color: rgb(14, 58, 34);
+  }
+
+  #resTable th .first {
+    border-top-left-radius: 10px;
+  }
+
+  #resTable th .last {
+    border-top-right-radius: 10px;
+  }
+
+  #apiError {
+    margin-top: 10px;
+    color: white;
+    background-color:#a94442;
+    padding: 15px;
+    border-radius: 10px;
+  }
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="logo">
+                Logo
+            </div>
+            <div class="nav">
+                navigation
+            </div>
+        </header>
+        <main>
+            <section id="formSec">
+                <form onsubmit="return Client.handleSubmit(event)">
+                    <label for="inputText">Input Article Here:</label>
+                    <textarea name="textInputArea" id="inputText" cols="30" rows="10"></textarea>
+                    <input type="submit" value="submit" id="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+            </section>
+            <section id="NLPSec">
+                <h3>NLP Data Returned:</h3>
+                <div id="results"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>This is a footer</p>
+        </footer>
+
+    </body>
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+        });
+        }
+     </script>
+</html>
