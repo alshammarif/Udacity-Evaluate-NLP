@@ -5,3 +5,4 @@ dump_ignore
 .DS_Store
 README.md 
 REQUIREMENTS.md
+src/.DS_Store
