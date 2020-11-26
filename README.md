@@ -153,3 +153,37 @@ All the Client side Javascript:
 * Imports all style files
 * Imports all required functions
 * Exports all required functions
+
+------
+
+### Webpack Config files: 
+
+#### webpack.prod.js Configuration File Set Up:
+
+* Require all Development Plugins
+* Set up the `modules.exports` object:
+	* Mode: Dev
+	* Rules: 
+		* babel-loader to parse JavaScript
+		* style-loader + css-loader to parse Sass 
+	* Plugins: 
+		* html-webpack-plugin allows Webpack to parse HTML files
+		* clean-webpack-plugin cleans up the Webpack 
+
+#### webpack.dev.js Configration File Set Up: 
+
+* Require all Production Plugins
+* Set up the `modules.exports` object:
+	* Mode: Prod
+	* Rules: 
+		* babel-loader to read JavaScript
+		* mini-css-extract-plugin loader + style-loader + css-loader to parse Sass
+	* Optimization:
+		* terser-webpack-plugin
+		* optimize-css-assets-webpack-plugin
+	* Plugins: 
+		* html-webpack-plugin allows Webpack to parse HTML files
+		* workbox-webpack-plugin service worker that can create offline content
+		* optimize-css-assets-webpack-plugin
+		* mini-css-extract-plugin initialize into one .css file
+
