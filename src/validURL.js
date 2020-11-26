@@ -1,4 +1,4 @@
-//this function was taken from stackoverflow
+//this function was taken from stackoverflow. This checks if it is a URL
 function validURL(str) {
     var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
       '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name

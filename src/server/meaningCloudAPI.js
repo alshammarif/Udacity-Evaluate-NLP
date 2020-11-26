@@ -1,8 +1,8 @@
 const apiKey = '8441a669b4a1b89a603a81a2fbac015e';
 const baseURL = 'https://api.meaningcloud.com/sentiment-2.1?key=';
-const nlpPost = require('../client/js/nlpViewPoster');
+const nlpPost = require('../client/js/post-builder/nlpViewPoster');
 
-
+//Main API call function. Gets ALL the JSON data from the API based on the input provided
 async function getApiData(input) {
 
         const req = await fetch(baseURL + apiKey + '&lang=auto' + '&ilang=en' + input);
@@ -31,6 +31,7 @@ async function getApiData(input) {
         }
 };
 
+//Checker - sees if sentence length is greater than 0 when code is "0"
 function checkCLMData(code, length) {
     if(code ==='0' && length === 0) {
         const noSentencesError = 'This link does not contain any sentence data to show.';
@@ -41,6 +42,7 @@ function checkCLMData(code, length) {
     }
 }
 
+//Checker - sees if API returns an 'error' status or an okay status by checking if status code is "0"
 function checkCodeisZero(code, msg) {
     if (code !== '0') {
         const errormsg = `Status ${code}: ${msg}.`;
@@ -51,7 +53,7 @@ function checkCodeisZero(code, msg) {
     }
 }
 
-
+//Parses the sentence list and gets the basic infomation and creates a new list
 async function getSentenceInfo(apiSentences) {
     let sentences = [];
     for(let i = 0; i < apiSentences.length; i++) {
@@ -72,6 +74,7 @@ async function getSentenceInfo(apiSentences) {
     return sentences;
 };
 
+//Parses the sentence's segment list and also extracts basic info and returns a new list
 function getSegmentsInfo(apiSegments) {
     let segments = [];
     for(let i = 0; i < apiSegments.length; i++) {
@@ -86,6 +89,7 @@ function getSegmentsInfo(apiSegments) {
     return segments;
 }
 
+//Sends data to the server using a POST method
 async function postSenData(url, sentences) {
     await fetch(url, {
         method: 'POST',
@@ -96,6 +100,7 @@ async function postSenData(url, sentences) {
     .catch(err => err);
 };
 
+//Retrieves data from the server 
 async function getNLPData(url) {
     const res = await fetch(url);
     try {
