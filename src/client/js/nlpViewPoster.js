@@ -59,12 +59,6 @@ function tdCreate(classN, txt) {
 function thCreate(name) {
     const th = document.createElement('th');
     th.className = "colTitle";
-    if(name === 'Level') {
-        th.classList.add('first');
-    }
-    if(name === 'Confidence') {
-        th.classList.add('last');
-    }
     th.innerText = name;
     tHeader.appendChild(th);
 }

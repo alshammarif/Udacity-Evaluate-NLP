@@ -1,7 +1,7 @@
 const apiKey = '8441a669b4a1b89a603a81a2fbac015e';
 const baseURL = 'https://api.meaningcloud.com/sentiment-2.1?key=';
 const nlpPost = require('../client/js/nlpViewPoster');
-const validURLChecker = require('../validURL');
+
 
 async function getApiData(input) {
 
