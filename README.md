@@ -1,6 +1,5 @@
 # Evaluating Articles using Natural Language Processing - Udacity Project 4
 ###### completed by Farah Alshammari
-------
 
 ```
 The code basis of this project was provided by Udacity. I have modified them to suit the project requirements while also adding my own CSS styling to the content. 
