@@ -3,3 +3,5 @@ dist
 package-lock.json
 dump_ignore
 .DS_Store
+README.md 
+REQUIREMENTS.md
