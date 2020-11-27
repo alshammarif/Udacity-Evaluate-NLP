@@ -1,7 +1,8 @@
+const tHeader = document.createElement('tr');
+tHeader.className = 'hRow';
+
 //Creates the header row
 function headerRow(table) {
-    const tHeader = document.createElement('tr');
-    tHeader.className = 'hRow';
     thCreate('Level');
     thCreate('Text');
     thCreate('Score');
